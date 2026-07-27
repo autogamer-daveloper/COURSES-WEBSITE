@@ -146,26 +146,6 @@ body {
     color: white;
 }
 
-@media (max-width:768px) {
-
-    .text-header {
-        font-size:20px;
-    }
-
-    .small-text {
-        font-size:20px;
-    }
-
-    .centered-text-block {
-        width:95%;
-    }
-
-    .footer-links {
-        flex-direction: column;
-        gap: 15px;
-    }
-}
-
 .guy {
     position: fixed;
     right: -100%;
@@ -251,22 +231,6 @@ body {
     transform: scale(0.96);
 }
 
-@media (max-width: 768px) {
-
-    .link-group h2 {
-        font-size: 26px;
-    }
-
-    .image-button img {
-        max-width: 80px;
-        width: 80px;
-    }
-
-    .link-buttons {
-        gap: 18px;
-    }
-}
-
 /* Github block */
 
 .github-block{
@@ -334,15 +298,64 @@ body {
 
 }
 
-@media (max-width: 768px) {
+@media (max-width:768px){
+
+    body{
+        background-attachment:scroll;
+    }
+
+    .content{
+        padding:35px 20px 15px;
+    }
+
+    .text-header{
+        font-size:24px;
+    }
+
+    .centered-text-block{
+        width:95%;
+    }
+
+    .small-text{
+        font-size:22px;
+        line-height:1.35;
+        width:95%;
+    }
+
+    .guy{
+        height:75vh;
+        right:-10%;
+    }
+
+    .link-group h2{
+        font-size:28px;
+    }
+
+    .image-button img{
+        width:120px;
+        max-width:120px;
+    }
+
+    .link-buttons{
+        gap:20px;
+    }
 
     .faq-question{
-        padding:10px 15px;
-        font-size:16px;
+        padding:16px 20px;
+        font-size:20px;
     }
 
     .faq-answer p{
-        margin:10px 15px;
-        font-size:14px;
+        margin:15px 20px;
+        font-size:18px;
     }
+
+    .footer-links{
+        gap:20px;
+    }
+
+    .footer-links a{
+        font-size:18px;
+    }
+
 }
