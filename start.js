@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
         preloader.classList.add("hidden");
         setTimeout(() => {
             preloader.style.display = "none";
-            content.style.display = "flex";
+            content.style.display = "block";
             guy.classList.add("show");
         }, 500); 
     }, 750);
