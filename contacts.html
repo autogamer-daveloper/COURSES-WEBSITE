@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты</title>
+
+    <link rel="stylesheet" href="style.css?v=1.0.0.1">
+
+    <link rel="preload" href="src/background.png?v=1.0.0.0" as="image">
+    <link rel="preload" href="src/spinner.png?v=1.0.0.0" as="image">
+</head>
+
+<body>
+
+    <div id="preloader">
+        <img src="src/spinner.png?v=1.0.0.0" alt="Loading..." class="spinner">
+        <div class="loading-text">Загрузка...</div>
+    </div>
+
+    <div id="content">
+
+        <img src="src/guy.png" class="guy" alt="">
+
+        <div class="content">
+
+            <div class="center-smth">
+                <div class="centered-text-block">
+                    <div class="text-header">
+                        <h1>Страница контактов</h1>
+                    </div>
+                </div>
+            </div>
+
+            <div class="links-section">
+
+                <div class="link-group">
+                    <h2>Как можно связаться со мной?</h2>
+
+                    <div class="link-buttons">
+                        <a href="mailto:autogamer222@gmail.com" target="_blank" rel="noopener" class="image-button">
+                            <img src="src/gmail.png" alt="">
+                        </a>
+
+                        <a href="https://t.me/autogamer222" target="_blank" class="image-button">
+                            <img src="src/telegram.png" alt="">
+                        </a>
+
+                        <a href="https://www.instagram.com/autogamer_gamedev/" target="_blank" class="image-button">
+                            <img src="src/instagram.png" alt="">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="link-group">
+                    <h2>Youtube-каналы</h2>
+
+                    <div class="link-buttons">
+                        <a href="https://www.youtube.com/@A-GAMES-STUDIO" target="_blank" class="image-button">
+                            <img src="src/youtube_1_Logo.png" alt="">
+                        </a>
+
+                        <a href="https://www.youtube.com/@autogamer_gamedev" target="_blank" class="image-button">
+                            <img src="src/youtube_2_Logo.png" alt="">
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="footer" style="--bg-image-panel: url(src/panel.png?v=1.0.0.0);">
+            <div class="footer-links">
+                <a href="faq.html?v=1.0">FAQ</a>
+                <a href="portfolio.html?v=1.0">Портфолио</a>
+                <a href="index.html?v=1.0">Главная</a>
+            </div>
+        </div>
+
+    </div> <!-- content -->
+
+    <script src="guy.js?v=1.0"></script>
+
+    <script>
+        (function () {
+            if (!sessionStorage.getItem("updated")) {
+                let url = window.location.href.split('?')[0];
+                let newUrl = url + '?t=' + new Date().getTime();
+
+                sessionStorage.setItem("updated", "true");
+                window.location.replace(newUrl);
+            }
+        })();
+    </script>
+
+</body>
+</html>

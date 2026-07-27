@@ -1,0 +1,348 @@
+@font-face {
+    font-family: "Fira Sans Condensed";
+    src: url("src/fonts/FiraSansCondensed-Regular.woff2") format("woff2");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Fira Sans Condensed";
+    src: url("src/fonts/FiraSansCondensed-Medium.woff2") format("woff2");
+    font-weight: 500;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Fira Sans Condensed", sans-serif;
+    background: url("src/empty-bg.png") center/cover fixed no-repeat;
+}
+
+.content {
+    padding: 40px 20px;
+}
+
+.center-smth,
+.centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.centered {
+    flex-direction: column;
+    text-align: center;
+}
+
+.centered-text-block {
+    width: 700px;
+    text-align: center;
+}
+
+.text-header {
+    font-size: 25px;
+    font-style: oblique;
+    color: #fff;
+    text-shadow: 2px 2px 0 #000;
+}
+
+.small-text {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 30px;
+    color: white;
+    text-shadow: 2px 2px 0 #000;
+}
+
+.styled-line {
+    width: 80%;
+    height: 5px;
+    border: 0;
+    border-radius: 5px;
+    margin: 0px auto;
+
+    background: linear-gradient(45deg,#3e3e3e,#151515,#565656);
+    background-size: 400% 400%;
+    animation: gradient-glow 8s ease infinite;
+}
+
+/* ---------- FOOTER ---------- */
+
+.footer {
+    background-image: var(--bg-image-panel);
+    background-size: cover;
+    padding: 35px 20px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    font-family: "Fira Sans Condensed", sans-serif;
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    text-shadow: 2px 2px 0 black;
+    transition: opacity .2s;
+}
+
+.footer-links a:hover {
+    opacity: .7;
+}
+
+/* ---------- PRELOADER ---------- */
+
+#preloader {
+    position: fixed;
+    inset: 0;
+    background: url("src/background.png") center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    z-index: 9999;
+    transition: opacity 1s;
+}
+
+#preloader.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.spinner {
+    width: 100px;
+    animation: spin 1s linear infinite;
+}
+
+.loading-text {
+    font-size: 18px;
+    color: white;
+    text-shadow: 2px 2px 0 black;
+}
+
+#content {
+    display: none;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes gradient-glow {
+    0% { background-position:0 50%; }
+    50% { background-position:100% 50%; }
+    100% { background-position:0 50%; }
+}
+
+::selection {
+    background: black;
+    color: white;
+}
+
+@media (max-width:768px) {
+
+    .text-header {
+        font-size:20px;
+    }
+
+    .small-text {
+        font-size:20px;
+    }
+
+    .centered-text-block {
+        width:95%;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+.guy {
+    position: fixed;
+    right: -100%;
+    bottom: 0;
+
+    height: 100vh;
+    width: auto;
+
+    z-index: -1;
+    pointer-events: none;
+
+    opacity: 1;
+
+    animation: guyEnter 1.2s ease-out forwards;
+    animation-play-state: paused;
+}
+
+.guy.show {
+    animation-play-state: running;
+}
+
+@keyframes guyEnter {
+    from {
+        right: -100%;
+    }
+
+    to {
+        right: 0;
+    }
+}
+
+/* Floating buttons */
+
+.links-section {
+    width: 100%;
+    max-width: 1100px;
+    margin: 10px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.link-group {
+    text-align: center;
+}
+
+.link-group h2 {
+    margin-bottom: 20px;
+    color: white;
+    font-size: 34px;
+    text-shadow: 3px 3px 0 black;
+}
+
+.link-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.image-button {
+    display: inline-block;
+    transition:
+        transform .18s cubic-bezier(.175, .885, .32, 1.275),
+        filter .18s;
+}
+
+.image-button img {
+    max-width: 200px;
+    display: block;
+    width: 200px;
+    height: auto;
+    user-select: none;
+    pointer-events: none;
+}
+
+.image-button:hover {
+    transform: scale(1.08);
+    filter: brightness(1.08);
+}
+
+.image-button:active {
+    transform: scale(0.96);
+}
+
+@media (max-width: 768px) {
+
+    .link-group h2 {
+        font-size: 26px;
+    }
+
+    .image-button img {
+        max-width: 80px;
+        width: 80px;
+    }
+
+    .link-buttons {
+        gap: 18px;
+    }
+}
+
+/* Github block */
+
+.github-block{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:15px;
+}
+
+/* FAQ item */
+
+.faq-item{
+    width:min(1000px,95%);
+    margin:10px auto;
+}
+
+.faq-question{
+
+    width:100%;
+
+    background:#111111;
+
+    color:white;
+
+    border:none;
+
+    cursor:pointer;
+
+    padding:20px 30px;
+
+    font-family:"Fira Sans Condensed",sans-serif;
+
+    font-size:28px;
+
+    text-align:left;
+
+    transition:.25s;
+}
+
+.faq-question:hover{
+
+    background:#1f1f1f;
+
+}
+
+.faq-answer{
+
+    max-height:0;
+
+    overflow:hidden;
+
+    background:#212121ca;
+
+    transition:max-height .35s ease;
+
+}
+
+.faq-answer p{
+
+    margin:20px 30px;
+
+    color:white;
+
+    font-size:22px;
+
+}
+
+@media (max-width: 768px) {
+
+    .faq-question{
+        padding:10px 15px;
+        font-size:16px;
+    }
+
+    .faq-answer p{
+        margin:10px 15px;
+        font-size:14px;
+    }
+}

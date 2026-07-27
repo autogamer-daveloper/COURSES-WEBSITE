@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ</title>
+
+    <link rel="stylesheet" href="style.css?v=1.0.0.1">
+
+    <link rel="preload" href="src/background.png?v=1.0.0.0" as="image">
+    <link rel="preload" href="src/spinner.png?v=1.0.0.0" as="image">
+</head>
+
+<body>
+
+    <div id="preloader">
+        <img src="src/spinner.png?v=1.0.0.0" alt="Loading..." class="spinner">
+        <div class="loading-text">Загрузка...</div>
+    </div>
+
+    <div id="content">
+
+        <img src="src/guy.png" class="guy" alt="">
+
+        <div class="content">
+
+            <div class="center-smth">
+                <div class="centered-text-block">
+                    <div class="text-header">
+                        <h1>FAQ</h1>
+                    </div>
+                </div>
+            </div>
+
+            <div class="small-text">
+                <p>
+                    На этой странице можно получить ответы на самые распространённые вопросы,
+                    касающиеся моей деятельности.
+                </p>
+            </div>
+
+            <div class="faq-item">
+
+                <button class="faq-question">
+                    <span class="question-text"
+                          data-open="▼ Какова ваша цель?"
+                          data-close="► Какова ваша цель?">
+                        ► Какова ваша цель?
+                    </span>
+                </button>
+
+                <div class="faq-answer">
+                    <p>
+                        Создавать качественные инди-игры и делиться накопленным опытом разработки через понятное и практическое обучение.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="faq-item">
+
+                <button class="faq-question">
+                    <span class="question-text"
+                          data-open="▼ Чем вы занимаетесь?"
+                          data-close="► Чем вы занимаетесь?">
+                        ► Чем вы занимаетесь?
+                    </span>
+                </button>
+
+                <div class="faq-answer">
+                    <p>
+                        Я занимаюсь разработкой игр на Unity, созданием игровых механик, архитектуры проектов, программированием на C#, публикацией контента и преподаванием.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="faq-item">
+
+                <button class="faq-question">
+                    <span class="question-text"
+                          data-open="▼ Какие инструменты вы используете для разработки игр?"
+                          data-close="► Какие инструменты вы используете для разработки игр?">
+                        ► Какие инструменты вы используете для разработки игр?
+                    </span>
+                </button>
+
+                <div class="faq-answer">
+                    <p>
+                        Я использую такие инструменты как Unity, VS Code, Paint.net, Blender, Ink space, Audacity и Kdenlive, а также различные нейросети.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="faq-item">
+
+                <button class="faq-question">
+                    <span class="question-text"
+                          data-open="▼ Можно ли посмотреть пример ваших работ?"
+                          data-close="► Можно ли посмотреть пример ваших работ?">
+                        ► Можно ли посмотреть пример ваших работ?
+                    </span>
+                </button>
+
+                <div class="faq-answer">
+                    <p>
+                        Да, подробнее можете ознакомиться с моими проектами во вкладке "Портфолио".
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="faq-item">
+
+                <button class="faq-question">
+                    <span class="question-text"
+                          data-open="▼ Создаёте ли вы игры с нуля?"
+                          data-close="► Создаёте ли вы игры с нуля?">
+                        ► Создаёте ли вы игры с нуля?
+                    </span>
+                </button>
+
+                <div class="faq-answer">
+                    <p>
+                        Да, я пишу игры в основном с нуля, но иногда могут применятся сторонние ассеты для облегчения разработки.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="faq-item">
+
+                <button class="faq-question">
+                    <span class="question-text"
+                          data-open="▼ В каком формате проходит обучение программированию у вас?"
+                          data-close="► В каком формате проходит обучение программированию у вас?">
+                        ► В каком формате проходит обучение программированию у вас?
+                    </span>
+                </button>
+
+                <div class="faq-answer">
+                    <p>
+                        Все уроки проходят в формате видеороликов. В таком формате вы можете удобно пересмотреть материал и лучше понять сложные темы.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="faq-item">
+
+                <button class="faq-question">
+                    <span class="question-text"
+                          data-open="▼ Для кого этот курс?"
+                          data-close="► Для кого этот курс?">
+                        ► Для кого этот курс?
+                    </span>
+                </button>
+
+                <div class="faq-answer">
+                    <p>
+                        Курс рассчитан на новичков и начинающих Unity-разработчиков, которые хотят понять принципы разработки, архитектуры проектов и программирования на C# без лишней воды.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="faq-item">
+
+                <button class="faq-question">
+                    <span class="question-text"
+                          data-open="▼ Сколько длиться обучение программированию у вас?"
+                          data-close="► Сколько длиться обучение программированию у вас?">
+                        ► Сколько длиться обучение программированию у вас?
+                    </span>
+                </button>
+
+                <div class="faq-answer">
+                    <p>
+                        Общая продолжительность видеоматериалов составляет около 70 минут. Однако основное обучение происходит во время практики: вы применяете показанные подходы в собственном проекте, поэтому фактическое время обучения значительно больше.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="faq-item">
+
+                <button class="faq-question">
+                    <span class="question-text"
+                          data-open="▼ Обязательно ли создавать свой проект во время обучения?"
+                          data-close="► Обязательно ли создавать свой проект во время обучения?">
+                        ► Обязательно ли создавать свой проект во время обучения?
+                    </span>
+                </button>
+
+                <div class="faq-answer">
+                    <p>
+                        Это не обязательно, но рекомендуется для усвоения материала и его закрепления.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="faq-item">
+
+                <button class="faq-question">
+                    <span class="question-text"
+                          data-open="▼ Могу ли я получить обратную связь, если что то не пойму?"
+                          data-close="► Могу ли я получить обратную связь, если что то не пойму?">
+                        ► Могу ли я получить обратную связь, если что то не пойму?
+                    </span>
+                </button>
+
+                <div class="faq-answer">
+                    <p>
+                        Да, вы можете обратиться ко мне с вопросами, касающиеся обучения, и я вам помогу.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="faq-item">
+
+                <button class="faq-question">
+                    <span class="question-text"
+                          data-open="▼ Я не уверен в ваших уроках, можно посмотреть урок бесплатно перед оплатой?"
+                          data-close="► Я не уверен в ваших уроках, можно посмотреть урок бесплатно перед оплатой?">
+                        ► Я не уверен в ваших уроках, можно посмотреть урок бесплатно перед оплатой?
+                    </span>
+                </button>
+
+                <div class="faq-answer">
+                    <p>
+                        Да, перед покупкой полного обучения вы можете посмотреть первые два урока.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="faq-item">
+
+                <button class="faq-question">
+                    <span class="question-text"
+                          data-open="▼ Как записаться на обучение?"
+                          data-close="► Как записаться на обучение?">
+                        ► Как записаться на обучение?
+                    </span>
+                </button>
+
+                <div class="faq-answer">
+                    <p>
+                        Свяжитесь со мной, и напишите в своём приветственном сообщении "Обучение".
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="faq-item">
+
+                <button class="faq-question">
+                    <span class="question-text"
+                          data-open="▼ Сколько стоит обучение разработке игр у вас?"
+                          data-close="► Сколько стоит обучение разработке игр у вас?">
+                        ► Сколько стоит обучение разработке игр у вас?
+                    </span>
+                </button>
+
+                <div class="faq-answer">
+                    <p>
+                        Стоимость полного курса — $60. В стоимость входит полный доступ ко всем урокам и возможность задавать вопросы по материалу.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="faq-item">
+
+                <button class="faq-question">
+                    <span class="question-text"
+                          data-open="▼ Какими способами оплаты принимаете средства?"
+                          data-close="► Какими способами оплаты принимаете средства?">
+                        ► Какими способами оплаты принимаете средства?
+                    </span>
+                </button>
+
+                <div class="faq-answer">
+                    <p>
+                        Переводы с карты на карту внутри страны (Узбекистан), а также Visa.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="faq-item">
+
+                <button class="faq-question">
+                    <span class="question-text"
+                          data-open="▼ Что я получу после прохождения?"
+                          data-close="► Что я получу после прохождения?">
+                        ► Что я получу после прохождения?
+                    </span>
+                </button>
+
+                <div class="faq-answer">
+                    <p>
+                        После курса вы сможете самостоятельно создавать небольшие проекты, понимать структуру Unity-проектов, писать собственный код и продолжать обучение уже без постоянной помощи преподавателя.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="faq-item">
+
+                <button class="faq-question">
+                    <span class="question-text"
+                          data-open="▼ Хочу задать свой вопрос, как можно это сделать?"
+                          data-close="► Хочу задать свой вопрос, как можно это сделать?">
+                        ► Хочу задать свой вопрос, как можно это сделать?
+                    </span>
+                </button>
+
+                <div class="faq-answer">
+                    <p>
+                        Интересующие вас вопросы можете задавать напрямую автору через страницу "Связаться".
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="footer" style="--bg-image-panel: url(src/panel.png?v=1.0.0.0);">
+            <div class="footer-links">
+                <a href="index.html?v=1.0">Главная</a>
+                <a href="portfolio.html?v=1.0">Портфолио</a>
+                <a href="contacts.html?v=1.0">Связаться</a>
+            </div>
+        </div>
+
+    </div> <!-- /#content -->
+
+    <script src="guy.js?v=1.0"></script>
+    <script src="faq-logic.js?v=1.0"></script>
+
+    <script>
+        (function () {
+            if (!sessionStorage.getItem("updated")) {
+                let url = window.location.href.split('?')[0];
+                let newUrl = url + '?t=' + new Date().getTime();
+
+                sessionStorage.setItem("updated", "true");
+                window.location.replace(newUrl);
+            }
+        })();
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная страница</title>
+    <link rel="stylesheet" href="style.css?v=1.0.0.1">
+    <link rel="preload" href="src/background.png?v=1.0.0.0" as="image">
+    <link rel="preload" href="src/spinner.png?v=1.0.0.0" as="image">
+</head>
+<body>
+  <div id="preloader">
+    <img src="src/spinner.png?v=1.0.0.0" alt="Loading..." class="spinner">
+    <div class="loading-text">Загрузка...</div>
+  </div>
+
+  <div id="content">
+    <div class="content">
+      <img src="src/guy.png" class="guy" alt="">
+        <div class="center-smth">
+            <div class="centered-text-block">
+                <div class="text-header">
+                    <h1>Обо мне</h1>
+                </div>
+            </div>
+        </div>
+        <div class="small-text">
+            <p>Более 6 лет занимаюсь разработкой игр на Unity. Автор проектов Slime Slasher и Stylish Horizon, а также множества других прототипов. Имею коммерческий опыт и продолжаю развивать собственные проекты.</p>
+        </div>
+        <div class="center-smth">
+            <div class="centered-text-block">
+                <div class="text-header">
+                    <h1>Факты</h1>
+                </div>
+            </div>
+        </div>
+        <div class="small-text">
+            <p>6+ лет опыта в разработке игр</p>
+            <p>2 крупных личных проекта</p>
+            <p>10+ завершённых прототипов и экспериментальных проектов</p>
+            <p>Коммерческий опыт разработки</p>
+            <p>Основная специализация — Unity / C#</p>
+        </div>
+    </div>
+    <div class="footer" style="--bg-image-panel: url(src/panel.png?v=1.0.0.0);">
+    <div class="footer-links">
+        <a href="faq.html?v=1.0">FAQ</a>
+        <a href="portfolio.html?v=1.0">Портфолио</a>
+        <a href="contacts.html?v=1.0">Связаться</a>
+    </div>
+    </div>
+
+  <script src="start.js?v=1.0"></script>
+
+  <script>
+    (function() {
+        if (!sessionStorage.getItem("updated")) {
+            let url = window.location.href.split('?')[0];
+            let newUrl = url + '?t=' + new Date().getTime();
+
+            sessionStorage.setItem("updated", "true");
+            window.location.replace(newUrl);
+        }
+    })();
+  </script>
+</body>
+</html>

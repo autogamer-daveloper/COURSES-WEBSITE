@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портфолио</title>
+
+    <link rel="stylesheet" href="style.css?v=1.0.0.1">
+
+    <link rel="preload" href="src/background.png?v=1.0.0.0" as="image">
+    <link rel="preload" href="src/spinner.png?v=1.0.0.0" as="image">
+</head>
+
+<body>
+
+    <div id="preloader">
+        <img src="src/spinner.png?v=1.0.0.0" alt="Loading..." class="spinner">
+        <div class="loading-text">Загрузка...</div>
+    </div>
+
+    <div id="content">
+
+        <img src="src/guy.png" class="guy" alt="">
+
+        <div class="content">
+
+            <div class="center-smth">
+                <div class="centered-text-block">
+                    <div class="text-header">
+                        <h1>Портфолио</h1>
+                    </div>
+                </div>
+            </div>
+
+            <div class="links-section">
+
+                <div class="link-group">
+                    <h2>Мои реализованные проекты</h2>
+
+                    <div class="link-buttons">
+                        <a href="https://play.google.com/store/apps/details?id=com.AGAMESSTUDIO.slimeslasher" target="_blank" class="image-button">
+                            <img src="src/slimeSlasherLogo.png" alt="">
+                        </a>
+
+                        <a href="https://play.google.com/store/apps/details?id=com.AGAMESSTUDIO.Stylishhorizon" target="_blank" class="image-button">
+                            <img src="src/stylishHorizonLogo.png" alt="">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="centered">
+                    <hr class="styled-line">
+                </div>
+
+            <div class="github-block">
+
+                <div class="small-text">
+                    <p>
+                        За свою карьеру я создал много прототипов игр и игровых механик.
+                        В GitHub опубликованы мои открытые проекты, эксперименты и различные
+                        наработки, связанные с разработкой игр.
+                    </p>
+                </div>
+
+                <div class="link-buttons">
+                    <a href="https://github.com/autogamer-daveloper"
+                    target="_blank"
+                    class="image-button">
+                        <img src="src/GithubLogo.png" alt="">
+                    </a>
+                </div>
+
+            </div>
+
+            </div>
+
+        </div>
+
+        <div class="footer" style="--bg-image-panel: url(src/panel.png?v=1.0.0.0);">
+            <div class="footer-links">
+                <a href="faq.html?v=1.0">FAQ</a>
+                <a href="index.html?v=1.0">Главная</a>
+                <a href="contacts.html?v=1.0">Связаться</a>
+            </div>
+        </div>
+
+    </div> <!-- content -->
+
+    <script src="guy.js?v=1.0"></script>
+
+    <script>
+        (function () {
+            if (!sessionStorage.getItem("updated")) {
+                let url = window.location.href.split('?')[0];
+                let newUrl = url + '?t=' + new Date().getTime();
+
+                sessionStorage.setItem("updated", "true");
+                window.location.replace(newUrl);
+            }
+        })();
+    </script>
+
+</body>
+</html>
